@@ -12,7 +12,7 @@
   "resources": [
     {
       "type": "Microsoft.Compute/availabilitySets",
-      "name": "[parameters('availabilitySetNames')[copyIndex()]]",
+      "name": "[concat(parameters('availabilitySetNames'),copyIndex(1))]",
       "apiVersion": "2015-06-15",
       "location": "[parameters('location')]",
       "copy": {
